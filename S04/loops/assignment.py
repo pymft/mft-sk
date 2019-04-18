@@ -17,10 +17,10 @@ print(words)
 # occurances of the or The
 #
 for word in words:
-    # if word[0] in "AEIOUaeiou":
-    #     vowels.append(word)
-    # else:
-    #     consonants.append(word)
+    if word[0] in "AEIOUaeiou":
+        vowels.append(word)
+    else:
+        consonants.append(word)
 
 
 print(vowels)
