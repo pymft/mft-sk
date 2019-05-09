@@ -1,6 +1,8 @@
 def fib(n):
     i = 0
     a, b = 1, 1
+    yield 1
+    yield 1
     while i < n:
         i += 1
         a, b = b, a + b
@@ -8,14 +10,17 @@ def fib(n):
 
 
 gen = fib(10)
+print(gen)
 v1 = next(gen)
 v2 = next(gen)
 v3 = next(gen)
-v4 = next(gen)
-v5 = next(gen)
+# v4 = next(gen)
+# v5 = next(gen)
 
-for i in gen:
-    print(i)
+print(list(gen))
+#
+# for i in gen:
+#     print(i)
 #
 # 1  1
 # 2  1 1
