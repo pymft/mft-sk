@@ -1,0 +1,6 @@
+f = open('input.txt')
+text = f.read()
+f.close()
+n, c = text.split()
+n = int(n)
+print(n*c)
