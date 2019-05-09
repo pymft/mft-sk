@@ -1,0 +1,7 @@
+print("\033[30;4m  hello \033[0m")
+print("\033[31;4m  hello \033[0m")
+print("\033[32;4m  hello \033[0m")
+print("\033[33;4m  hello \033[0m")
+print("\033[34;4m  hello \033[0m")
+print("\033[35;4m  hello \033[0m")
+print("\033[36;4m  hello \033[0m")
