@@ -1,28 +1,17 @@
 import math
 
 def decorator(f):
-    def out(x):
-
-        res = f(x)
-
+    def out(*args, **kwargs):
+        res = f(*args, **kwargs)
         return res
-
     return out
 
 
 @decorator   # echo = decorator(echo)
-def echo(s):
+def echo(s, n):
     return s
 
 
-@decorator
-def fact(n):
-    return math.factorial(n)
-
-# echo = decorator(echo)
-
-res = echo("Hello")
+res = echo("Hello", 7)
 print(res)
 
-
-print(fact(5))
