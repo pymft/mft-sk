@@ -1,18 +1,28 @@
-def fun_weird(f):
+import math
+
+def decorator(f):
     def out(x):
-        res = "\033[31;1m" + str(f(x)) + "\033[0m"
+
+        res = f(x)
+
         return res
 
     return out
 
 
+@decorator   # echo = decorator(echo)
 def echo(s):
     return s
 
 
-echo_new = fun_weird(echo)
-res = echo_new("hello")
+@decorator
+def fact(n):
+    return math.factorial(n)
+
+# echo = decorator(echo)
+
+res = echo("Hello")
 print(res)
 
-new_len = fun_weird(len)
-print(new_len([1, 2, 3, 43]))
+
+print(fact(5))
